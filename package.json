@@ -1,0 +1,39 @@
+{
+    "name": "dexes-data-provider",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon ./index.ts",
+        "start-prod": "ts-node ./index.ts",
+        "typechain-build": "typechain --target=ethers-v5 abis/*.json --out-dir typechain-types",
+        "mock-token-configs": "ts-node ./mock-token-configs.ts",
+        "init-code-hash": "ts-node ./univ2-init-code-hash.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AAApp-Account-Abstraction-Wallet/dexes-data-provider.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/AAApp-Account-Abstraction-Wallet/dexes-data-provider/issues"
+    },
+    "homepage": "https://github.com/AAApp-Account-Abstraction-Wallet/dexes-data-provider#readme",
+    "dependencies": {
+        "@cryptoalgebra/integral-sdk": "^0.11.1",
+        "@uniswap/sdk-core": "^4.0.10",
+        "@uniswap/v3-sdk": "^3.10.0",
+        "bignumber.js": "^9.1.2",
+        "dotenv": "^16.3.1",
+        "ethers": "^5.7.2",
+        "ethers-multicall": "^0.2.3",
+        "mongoose": "^8.0.3",
+        "nodemon": "^3.0.2"
+    },
+    "devDependencies": {
+        "@typechain/ethers-v5": "^11.1.2",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.2.2"
+    }
+}
